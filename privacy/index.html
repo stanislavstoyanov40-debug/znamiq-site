@@ -78,7 +78,8 @@
         <p>Your username is shown to other players in direct challenges, duel results and duel history, together with the final score and result of duels you played with them. Another player can send you a challenge if they know your exact username. In random matchmaking, your username is not shown to your opponent before the duel starts. Other players never see your email address.</p>
 
         <h3>Question statistics</h3>
-        <p>When a signed-in quiz or a duel answer is recorded, we also update a per-question count of how many times the question was answered and how many times correctly, with the time it was last answered. These counts are stored per question, not per player, and are used to assess how difficult questions are.</p>
+        <p>When a signed-in quiz or a duel answer is recorded, we also update a per-question count of how many times the question was answered and how many times correctly, with the time it was last answered. These counts are stored per question, not per player.</p>
+        <p>So that each player counts only once when we assess how difficult a question is, we also store your first answer to each question: your account id, the question, the version of its facts, whether that answer was correct and when you gave it. Only answers to questions that are in the game at that moment count. From these first answers we keep per-question counts of players and of players who answered correctly; after every 100 new players a question's difficulty level may change for future games. Games already played are never changed. The admin tool shows these counts per question, not who answered.</p>
 
         <h3>Question reports</h3>
         <p>On the result of a completed signed-in quiz or duel you can report one of its questions. A report stores your account id, the question, the reason you chose (wrong answer, ambiguous, outdated, or typo / wording; there is no free text), the version of the question, when you sent it, and its review status and when it was reviewed. The first report takes the question out of new quizzes and duels until it is reviewed. You are not told the outcome.</p>
@@ -166,7 +167,7 @@
         <ul>
           <li><strong>Providing the app and your account</strong> (sign-in, ratings, quizzes, usernames, duels, challenges, duel history and account deletion): necessary to provide the service you ask for (Article 6(1)(b) GDPR).</li>
           <li><strong>Keeping the service secure and working</strong> (technical data, preventing misuse, server-side scoring): our legitimate interest in a reliable and fair game (Article 6(1)(f) GDPR).</li>
-          <li><strong>Question statistics:</strong> our legitimate interest in keeping questions at the right difficulty (Article 6(1)(f) GDPR).</li>
+          <li><strong>Question statistics and the first answer of each player:</strong> our legitimate interest in keeping questions at the right difficulty and counting each player once (Article 6(1)(f) GDPR).</li>
           <li><strong>Question reports:</strong> our legitimate interest in correct and up-to-date questions, and in limiting misuse of reports (one report per question, at most 5 in 24 hours) (Article 6(1)(f) GDPR).</li>
           <li><strong>Answering your requests</strong> sent to support@znamiq.app, including requests to exercise your rights: necessary to provide the service, and to meet our legal obligations (Article 6(1)(b) and (c) GDPR).</li>
           <li><strong>Ads:</strong> where consent is required for storing or accessing information on your device or for personalised advertising, we rely on your consent (Article 6(1)(a) GDPR), which you can withdraw at any time in Settings → Ad privacy choices. Where applicable law permits processing without consent, we may rely on legitimate interests such as funding and protecting the free service (Article 6(1)(f) GDPR), subject to your rights and Google's available limited-ad modes.</li>
@@ -177,6 +178,7 @@
         <ul>
           <li><strong>Account data</strong> (section 3) is kept while your account exists and is deleted when you delete your account. Inactive accounts are not deleted automatically.</li>
           <li><strong>After account deletion</strong>, some data that no longer identifies you remains, as explained on the <a href="/delete-account/">Delete Account</a> page.</li>
+          <li><strong>Your first answers to questions</strong> are kept while your account exists and are deleted with your account; the per-question counts of players stay, without any link to you.</li>
           <li><strong>Question reports</strong> are kept as long as they are needed for the questions' review history. When you delete your account, your account id is removed from your reports; the reports stay without any link to you.</li>
           <li><strong>Device data</strong> stays on your device until you uninstall the app or clear its storage.</li>
           <li><strong>Backups and logs</strong> kept by our providers may contain deleted data until they are replaced or expire under the provider's own cycle.</li>
